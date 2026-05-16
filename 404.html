@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Космическая ошибка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #0a0f1e, #0a1a2f);
+            font-family: 'Courier New', monospace;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            animation: starsMove 20s linear infinite;
+        }
+        @keyframes starsMove {
+            from { transform: translateY(0); }
+            to { transform: translateY(-1000px); }
+        }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 2s infinite alternate;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(1);}
+            100% { opacity: 1; transform: scale(1.2);}
+        }
+        .container {
+            text-align: center;
+            z-index: 2;
+            background: rgba(0,0,0,0.7);
+            padding: 50px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 50px rgba(0,255,255,0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        h1 {
+            font-size: 120px;
+            color: #00ffff;
+            text-shadow: 0 0 20px #00ffff, 0 0 40px #0088ff;
+            letter-spacing: 15px;
+        }
+        p {
+            color: white;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .glitch {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            position: relative;
+            animation: glitch 1s infinite;
+        }
+        @keyframes glitch {
+            0% { text-shadow: -2px 0 red, 2px 0 blue; }
+            50% { text-shadow: 2px 0 red, -2px 0 blue; }
+            100% { text-shadow: -2px 0 red, 2px 0 blue; }
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: #ff3366;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 0 15px #ff3366;
+        }
+        .home-btn:hover {
+            transform: scale(1.1);
+            background: #ff6633;
+            box-shadow: 0 0 25px #ff6633;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="container">
+        <h1>404</h1>
+        <p>🚀 Потерялся в космосе...</p>
+        <div class="glitch">СТРАНИЦА НЕ НАЙДЕНА</div>
+        <a href="index.html" class="home-btn">◀ Вернуться на Землю</a>
+    </div>
+</body>
+</html>
