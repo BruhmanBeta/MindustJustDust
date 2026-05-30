@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сборка модов - Calamity Server</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🔥</span>
+                    <span class="logo__text">Calamity<span class="logo__accent">Server</span></span>
+                </a>
+                <ul class="nav__list" id="navList">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="mods.html" class="nav__link active">Сборка модов</a></li>
+                    <li><a href="history.html" class="nav__link">История сервера</a></li>
+                    <li><a href="about.html" class="nav__link">О сервере</a></li>
+                    <li><a href="contacts.html" class="nav__link">Заявка</a></li>
+                </ul>
+                <button class="burger" id="burgerMenu">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">📦 Сборка модов сервера</h1>
+                <p class="page-desc">Все моды, которые нужны для игры на нашем сервере</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="filters">
+                <button class="filter-btn active">Все моды</button>
+                <button class="filter-btn">Обязательные</button>
+                <button class="filter-btn">Рекомендуемые</button>
+                <button class="filter-btn">QoL</button>
+            </div>
+
+            <div class="mods-grid">
+                <!-- Мод 1 - Calamity -->
+                <article class="mod-card">
+                    <div class="mod-card__header">
+                        <img src="images/Calamity.png" alt="Calamity" class="mod-card__img">
+                        <span class="mod-card__badge mod-card__badge--required">Обязателен</span>
+                    </div>
+                    <div class="mod-card__body">
+                        <h3 class="mod-card__title">Calamity Mod</h3>
+                        <div class="mod-card__info"><span>⭐ 4.9</span><span>📥 9,226,400</span></div>
+                        <p class="mod-card__desc">
+                            Calamity Mod — это мод с обширным количеством контента, дарующий новый и освежающий опыт игры в Terraria!
+
+Данный мод добавляет множество новых боссов и НИПов, биомы для исследования, уникальные режимы сложности и больше двух тысяч предметов! Calamity Mod также значительно расширяет финальные этапы Terraria, создавая для игроков особый, напряжённый опыт.
+                            Основной мод сборки. Добавляет тонны контента: боссов, биомы, оружие.
+                        </p>
+                        <div class="mod-card__tags">
+                            <span class="mod-card__tag">Контент</span><span class="mod-card__tag">Боссы</span>
+                        </div>
+                        <div class="mod-card__footer">
+                            <span class="mod-card__version">v2.1.2</span>
+                            <a href="#" class="mod-card__link">Скачать</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Мод 2 -->
+                <article class="mod-card">
+                    <div class="mod-card__header">
+                        <img src="images/Calamitymusic.png" alt="Music" class="mod-card__img">
+                        <span class="mod-card__badge mod-card__badge--required">Обязателен</span>
+                    </div>
+                    <div class="mod-card__body">
+                        <h3 class="mod-card__title">Calamity Mod Music</h3>
+                        <div class="mod-card__info"><span>⭐ 4.8</span><span>📥 8,739,693</span></div>
+                        <p class="mod-card__desc">
+                            Данный мод добавляет саундтрек Calamity Mod и музыкальные шкатулки к каждой песне. Он предназначен для игры вместе с Calamity Mod, но также может быть использован без главного мода. Однако, если Вы хотите получить музыкальные шкатулки предназначенными способами, Вам потребуется использовать Calamity Mod.
+                        </p>
+                        <div class="mod-card__tags">
+                            <span class="mod-card__tag">Музыка</span>
+                        </div>
+                        <div class="mod-card__footer">
+                            <span class="mod-card__version">v2.1</span>
+                            <a href="#" class="mod-card__link">Скачать</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Мод 3 -->
+                <article class="mod-card">
+                    <div class="mod-card__header">
+                        <img src="images/magicstorage.png" alt="Storage" class="magicstorage">
+                        <span class="mod-card__badge mod-card__badge--optional">Рекомендуется</span>
+                    </div>
+                    <div class="mod-card__body">
+                        <h3 class="mod-card__title">Magic Storage</h3>
+                        <div class="mod-card__info"><span>⭐ 4.8</span><span>📥 6,655,252</span></div>
+                        <p class="mod-card__desc">
+                            Вы устали от беспорядка в сундуках на вашей базе? Никогда не помните, куда вы положили свои вещи, и вам приходится бегать по всему дому, чтобы добраться от сундука к сундуку? Этот мод решит все ваши проблемы!
+
+Этот мод предлагает решение проблем с хранением раз и навсегда. Это позволяет вам создать централизованную сеть для хранения всех ваших товаров, доступ к которым вы можете получить из одного блока. При желании вы даже можете настроить несколько точек доступа для использования вашего хранилища из любой точки мира. Вы можете искать в своем хранилище предметы с определенным названием, фильтровать по типам предметов и т.д. Волшебное хранилище может даже создавать предметы для вас!
+                        </p>
+                        <div class="mod-card__tags">
+                            <span class="mod-card__tag">QoL</span><span class="mod-card__tag">Хранение</span>
+                        </div>
+                        <div class="mod-card__footer">
+                            <span class="mod-card__version">v0.7.0.11</span>
+                            <a href="#" class="mod-card__link">Скачать</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Мод 4 -->
+                <article class="mod-card">
+                    <div class="mod-card__header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='180'%3E%3Crect fill='%231a0a00' width='300' height='180'/%3E%3Ctext x='150' y='90' text-anchor='middle' fill='%23ff4500' font-size='16'%3EBOSS%3C/text%3E%3C/svg%3E" alt="Checklist" class="mod-card__img">
+                        <span class="mod-card__badge mod-card__badge--optional">Рекомендуется</span>
+                    </div>
+                    <div class="mod-card__body">
+                        <h3 class="mod-card__title">Boss Checklist</h3>
+                        <div class="mod-card__info"><span>⭐ 4.7</span><span>📥 1.5M</span></div>
+                        <p class="mod-card__desc">
+                            Отслеживай прогресс по боссам. Удобно для командной игры.
+                        </p>
+                        <div class="mod-card__tags">
+                            <span class="mod-card__tag">QoL</span><span class="mod-card__tag">Прогресс</span>
+                        </div>
+                        <div class="mod-card__footer">
+                            <span class="mod-card__version">v1.5.2</span>
+                            <a href="#" class="mod-card__link">Скачать</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Мод 5 -->
+                <article class="mod-card">
+                    <div class="mod-card__header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='180'%3E%3Crect fill='%231a0a00' width='300' height='180'/%3E%3Ctext x='150' y='90' text-anchor='middle' fill='%23ff8c42' font-size='18'%3ERECIPE%3C/text%3E%3C/svg%3E" alt="Browser" class="mod-card__img">
+                        <span class="mod-card__badge mod-card__badge--optional">Рекомендуется</span>
+                    </div>
+                    <div class="mod-card__body">
+                        <h3 class="mod-card__title">Recipe Browser</h3>
+                        <div class="mod-card__info"><span>⭐ 4.9</span><span>📥 3M</span></div>
+                        <p class="mod-card__desc">
+                            Быстрый просмотр рецептов прямо в игре.
+                        </p>
+                        <div class="mod-card__tags">
+                            <span class="mod-card__tag">QoL</span><span class="mod-card__tag">Рецепты</span>
+                        </div>
+                        <div class="mod-card__footer">
+                            <span class="mod-card__version">v0.10.2</span>
+                            <a href="#" class="mod-card__link">Скачать</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Мод 6 -->
+                <article class="mod-card">
+                    <div class="mod-card__header">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='180'%3E%3Crect fill='%231a0a00' width='300' height='180'/%3E%3Ctext x='150' y='90' text-anchor='middle' fill='%23c8c800' font-size='16'%3EVEINMINER%3C/text%3E%3C/svg%3E" alt="VeinMiner" class="mod-card__img">
+                        <span class="mod-card__badge mod-card__badge--optional">Опционально</span>
+                    </div>
+                    <div class="mod-card__body">
+                        <h3 class="mod-card__title">VeinMiner</h3>
+                        <div class="mod-card__info"><span>⭐ 4.4</span><span>📥 950K</span></div>
+                        <p class="mod-card__desc">
+                            Добывай жилы руды за один клик. Экономит время.
+                        </p>
+                        <div class="mod-card__tags">
+                            <span class="mod-card__tag">QoL</span><span class="mod-card__tag">Добыча</span>
+                        </div>
+                        <div class="mod-card__footer">
+                            <span class="mod-card__version">v2.4.0</span>
+                            <a href="#" class="mod-card__link">Скачать</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">© 2026 Calamity Server.</p>
+            <div class="footer__links">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О сервере</a>
+                <a href="history.html">История</a>
+                <a href="contacts.html">Заявка</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

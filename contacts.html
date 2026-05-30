@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявка - Calamity Server</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🔥</span>
+                    <span class="logo__text">Calamity<span class="logo__accent">Server</span></span>
+                </a>
+                <ul class="nav__list" id="navList">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="mods.html" class="nav__link">Сборка модов</a></li>
+                    <li><a href="history.html" class="nav__link">История сервера</a></li>
+                    <li><a href="about.html" class="nav__link">О сервере</a></li>
+                    <li><a href="contacts.html" class="nav__link active">Заявка</a></li>
+                </ul>
+                <button class="burger" id="burgerMenu">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">📝 Подать заявку</h1>
+                <p class="page-desc">Заполни форму и присоединяйся к серверу</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="contacts-layout">
+                <div class="contacts-info">
+                    <h3 class="contacts-info__title">📋 Правила подачи</h3>
+                    
+                    <div class="contacts-info__item">
+                        <span class="contacts-info__icon">1️⃣</span>
+                        <div class="contacts-info__text">
+                            <h4>Опыт игры</h4>
+                            <p>
+                                Желательно знать механику ванильной Terraria. 
+                                Опыт в Calamity приветствуется.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contacts-info__item">
+                        <span class="contacts-info__icon">2️⃣</span>
+                        <div class="contacts-info__text">
+                            <h4>График игры</h4>
+                            <p>
+                                Играем когда как, обычно по вечерам и на выходных. 
+                                Желательно заходить ииграть хотя бы 3 раза в неделю.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contacts-info__item">
+                        <span class="contacts-info__icon">3️⃣</span>
+                        <div class="contacts-info__text">
+                            <h4>Связь</h4>
+                            <p>
+                                Желательно наличие Discord для голосового общения. 
+                                Удачной игры!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contacts-info__item">
+                        <span class="contacts-info__icon">⚠️</span>
+                        <div class="contacts-info__text">
+                            <h4>Важно</h4>
+                            <p>
+                                Перед подачей заявки установи все моды из раздела 
+                                <a href="mods.html" style="color:var(--orange);">Сборка модов</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Соцсети -->
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Discord">💬</a>
+                        <a href="#" class="social-link" title="Telegram">📱</a>
+                        <a href="#" class="social-link" title="Steam">🎮</a>
+                    </div>
+                </div>
+
+                <!-- Форма заявки -->
+                <form class="contacts-form" action="#" method="POST">
+                    <h3 class="contacts-form__title">✏️ Анкета игрока</h3>
+                    
+                    <div class="form-group">
+                        <label for="nickname">Твой ник в Steam</label>
+                        <input type="text" id="nickname" name="nickname" placeholder="Введи свой ник" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="discord">Discord (ник#0000)</label>
+                        <input type="text" id="discord" name="discord" placeholder="Введи Discord" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="class">Предпочитаемый класс</label>
+                        <select id="class" name="class">
+                            <option value="">Выбери класс</option>
+                            <option value="melee">⚔️ Воин (Warrior)</option>
+                            <option value="ranger">🏹 Стрелок (Ranger)</option>
+                            <option value="mage">🔮 Маг (Sorcerer)</option>
+                            <option value="summoner">👾 Призыватель (Summoner)</option>
+                            <option value="any">🎲 Любой</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Опыт в Terraria</label>
+                        <select id="experience" name="experience">
+                            <option value="">Выбери уровень</option>
+                            <option value="beginner">🌱 Новичок (прошёл/не прошел ваниллу )</option>
+                            <option value="medium">⚡ Средний (играл с модами)</option>
+                            <option value="expert">💀 Эксперт (знаю Calamity)</option>
+                            <option value="god">🔥 Бог (прошёл Death Mode)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="schedule">Когда можешь играть?</label>
+                        <input type="text" id="schedule" name="schedule" placeholder="Например: вечера будней, выходные" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="about">Расскажи о себе</label>
+                        <textarea id="about" name="about" placeholder="Твой опыт, любимые моды, почему хочешь играть с нами..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center;">
+                        💀 Отправить заявку
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">© 2026 Calamity Server.</p>
+            <div class="footer__links">
+                <a href="index.html">Главная</a>
+                <a href="mods.html">Сборка</a>
+                <a href="history.html">История</a>
+                <a href="about.html">О сервере</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

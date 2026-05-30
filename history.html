@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История сервера - Calamity Server</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <span class="logo__icon">🔥</span>
+                    <span class="logo__text">Calamity<span class="logo__accent">Server</span></span>
+                </a>
+                <ul class="nav__list" id="navList">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="mods.html" class="nav__link">Сборка модов</a></li>
+                    <li><a href="history.html" class="nav__link active">История сервера</a></li>
+                    <li><a href="about.html" class="nav__link">О сервере</a></li>
+                    <li><a href="contacts.html" class="nav__link">Заявка</a></li>
+                </ul>
+                <button class="burger" id="burgerMenu">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">📜 История модов сервера</h1>
+                <p class="page-desc">Какие моды мы использовали раньше и что стоит сейчас</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="timeline">
+                
+                <!-- Текущие моды -->
+                <div class="timeline-section">
+                    <span class="timeline-section__title">⚡ ТЕКУЩАЯ СБОРКА</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-item__year">2025</span>
+                    <div class="timeline-item__content">
+                        <h3 class="timeline-item__title">
+                            Calamity + Fargo's Souls Mod + QoL
+                        </h3>
+                        <p class="timeline-item__text">
+                            Основная сборка на лето для сервера. Calamity Mod с удобными QoL модами и Fargo's Souls Mod(решили вернуть). 
+                            Играем на Мазохисте. Пока что не стартовали адекватно.
+                        </p>
+                        <span class="timeline-item__status status--active">✓ Активна сейчас</span>
+                    </div>
+                </div>
+
+                <!-- Прошлые сборки -->
+                <div class="timeline-section">
+                    <span class="timeline-section__title">🕐 ПРОШЛЫЕ СБОРКИ</span>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-item__year">2025</span>
+                    <div class="timeline-item__content">
+                        <h3 class="timeline-item__title">
+                            Thorium + Spirit
+                        </h3>
+                        <p class="timeline-item__text">
+                            Прошли за 3 месяца. Было весело, но контент закончился быстрее, 
+                            чем ожидали. Боссы Thorium оказались слишком лёгкими для команды.
+                        </p>
+                        <span class="timeline-item__status status--inactive">✗ Завершена</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-item__year">2025</span>
+                    <div class="timeline-item__content">
+                        <h3 class="timeline-item__title">
+                            Fargo's Souls Mod
+                        </h3>
+                        <p class="timeline-item__text">
+                            Попытка пройти хардкорную сборку. Слишком сложно для большинства игроков. 
+                            Сервер закрылся через 2 недели из-за нехватки людей.
+                        </p>
+                        <span class="timeline-item__status status--replaced">↻ Закрыта</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-item__year">2024</span>
+                    <div class="timeline-item__content">
+                        <h3 class="timeline-item__title">
+                            Overhaul Mod
+                        </h3>
+                        <p class="timeline-item__text">
+                            Экспериментальная сборка. Мод сильно менял механику, 
+                            не все игроки оценили. Отказались через месяц.
+                        </p>
+                        <span class="timeline-item__status status--inactive">✗ Отменена</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-item__year">2024</span>
+                    <div class="timeline-item__content">
+                        <h3 class="timeline-item__title">
+                            Ванилла + QoL
+                        </h3>
+                        <p class="timeline-item__text">
+                            Самый первый запуск сервера(Самый удачный). Прошли всю ваниллу на мастере. 
+                            Отличный опыт, но захотелось больше контента.
+                        </p>
+                        <span class="timeline-item__status status--inactive">✓ Пройдена</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">© 2026 Calamity Server.</p>
+            <div class="footer__links">
+                <a href="index.html">Главная</a>
+                <a href="mods.html">Сборка</a>
+                <a href="about.html">О сервере</a>
+                <a href="contacts.html">Заявка</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

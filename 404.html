@@ -3,109 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 — Космическая ошибка</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: linear-gradient(135deg, #0a0f1e, #0a1a2f);
-            font-family: 'Courier New', monospace;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            position: relative;
-        }
-        .stars {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            animation: starsMove 20s linear infinite;
-        }
-        @keyframes starsMove {
-            from { transform: translateY(0); }
-            to { transform: translateY(-1000px); }
-        }
-        .star {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            opacity: 0.8;
-            animation: twinkle 2s infinite alternate;
-        }
-        @keyframes twinkle {
-            0% { opacity: 0.3; transform: scale(1);}
-            100% { opacity: 1; transform: scale(1.2);}
-        }
-        .container {
-            text-align: center;
-            z-index: 2;
-            background: rgba(0,0,0,0.7);
-            padding: 50px;
-            border-radius: 30px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 50px rgba(0,255,255,0.3);
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        h1 {
-            font-size: 120px;
-            color: #00ffff;
-            text-shadow: 0 0 20px #00ffff, 0 0 40px #0088ff;
-            letter-spacing: 15px;
-        }
-        p {
-            color: white;
-            font-size: 24px;
-            margin: 20px 0;
-        }
-        .glitch {
-            font-size: 28px;
-            font-weight: bold;
-            color: white;
-            position: relative;
-            animation: glitch 1s infinite;
-        }
-        @keyframes glitch {
-            0% { text-shadow: -2px 0 red, 2px 0 blue; }
-            50% { text-shadow: 2px 0 red, -2px 0 blue; }
-            100% { text-shadow: -2px 0 red, 2px 0 blue; }
-        }
-        .home-btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 30px;
-            background: #ff3366;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: 0.3s;
-            box-shadow: 0 0 15px #ff3366;
-        }
-        .home-btn:hover {
-            transform: scale(1.1);
-            background: #ff6633;
-            box-shadow: 0 0 25px #ff6633;
-        }
-    </style>
+    <title>Страница была сожрана "Пожирателем Богов"</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="stars" id="stars"></div>
-    <div class="container">
-        <h1>404</h1>
-        <p> Потерялся в космосе...</p>
-        <div class="glitch">СТРАНИЦА НЕ НАЙДЕНА</div>
-        <a href="index.html" class="home-btn">◀ Вернуться на Землю</a>
-    </div>
+    <main class="page-404">
+        <!-- Летающие частицы -->
+        <div class="particles-void" id="particlesVoid"></div>
+        
+        <!-- Световые полоски -->
+        <div class="light-streaks" id="lightStreaks"></div>
+
+        <!-- Энергетические кольца -->
+        <div class="energy-rings" id="energyRings"></div>
+
+        <!-- Мерцающие точки -->
+        <div class="sparkles" id="sparkles"></div>
+
+        <!-- Фоновые свечения -->
+        <div class="void-glow void-glow--1"></div>
+        <div class="void-glow void-glow--2"></div>
+        <div class="void-glow void-glow--3"></div>
+
+        <div class="page-404__content">
+            <div class="page-404__number">404</div>
+            <h1 class="page-404__title">
+                <span class="title-icon">⬡</span> СТРАНИЦА СОЖРАНА <span class="title-icon">⬡</span>
+            </h1>
+            <p class="page-404__text">
+                <span class="highlight">Пожиратель Богов</span> поглотил эту страницу. 
+                Теперь она — часть космической пустоты. 
+                Здесь ничего нет, только холод и тишина.
+            </p>
+            <div class="page-404__actions">
+                <a href="index.html" class="btn--void">🌌 Вернуться на базу</a>
+                <a href="contacts.html" class="btn--void btn--void-outline">⚔️ Бросить вызов</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // ============================================
+        // ЛЕТАЮЩИЕ ЧАСТИЦЫ
+        // ============================================
+        const particlesContainer = document.getElementById('particlesVoid');
+        const particleTypes = [
+            'void-particle--star',
+            'void-particle--ring', 
+            'void-particle--blue', 
+            'void-particle--purple',
+            'void-particle--bright'
+        ];
+        
+        for (let i = 0; i < 60; i++) {
+            const particle = document.createElement('div');
+            const type = particleTypes[Math.floor(Math.random() * particleTypes.length)];
+            const size = type === 'void-particle--ring' ? Math.random() * 5 + 3 : Math.random() * 3 + 1;
+            
+            particle.classList.add('void-particle', type);
+            particle.style.cssText = `
+                left: ${Math.random() * 100}%;
+                --dur: ${Math.random() * 15 + 10}s;
+                --drift: ${(Math.random() - 0.5) * 150}px;
+                --drift-end: ${(Math.random() - 0.5) * 150}px;
+                animation-delay: ${Math.random() * 15}s;
+                width: ${size}px;
+                height: ${size}px;
+            `;
+            particlesContainer.appendChild(particle);
+        }
+
+        // ============================================
+        // СВЕТОВЫЕ ПОЛОСКИ
+        // ============================================
+        const streaksContainer = document.getElementById('lightStreaks');
+        const streakTypes = ['light-streak--blue', 'light-streak--purple', 'light-streak--white'];
+        
+        for (let i = 0; i < 15; i++) {
+            const streak = document.createElement('div');
+            const type = streakTypes[Math.floor(Math.random() * streakTypes.length)];
+            
+            streak.classList.add('light-streak', type);
+            streak.style.cssText = `
+                left: ${Math.random() * 100}%;
+                --dur: ${Math.random() * 10 + 8}s;
+                --delay: ${Math.random() * 12}s;
+                height: ${Math.random() * 80 + 40}px;
+            `;
+            streaksContainer.appendChild(streak);
+        }
+
+        // ============================================
+        // ЭНЕРГЕТИЧЕСКИЕ КОЛЬЦА
+        // ============================================
+        const ringsContainer = document.getElementById('energyRings');
+        const ringTypes = ['energy-ring--blue', 'energy-ring--purple'];
+        
+        for (let i = 0; i < 8; i++) {
+            const ring = document.createElement('div');
+            const type = ringTypes[Math.floor(Math.random() * ringTypes.length)];
+            
+            ring.classList.add('energy-ring', type);
+            ring.style.cssText = `
+                left: ${Math.random() * 80 + 10}%;
+                top: ${Math.random() * 80 + 10}%;
+                --dur: ${Math.random() * 8 + 6}s;
+                --delay: ${Math.random() * 10}s;
+            `;
+            ringsContainer.appendChild(ring);
+        }
+
+        // ============================================
+        // МЕРЦАЮЩИЕ ТОЧКИ
+        // ============================================
+        const sparklesContainer = document.getElementById('sparkles');
+        
+        for (let i = 0; i < 40; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.style.cssText = `
+                top: ${Math.random() * 100}%;
+                left: ${Math.random() * 100}%;
+                --dur: ${Math.random() * 4 + 2}s;
+                --delay: ${Math.random() * 5}s;
+            `;
+            sparklesContainer.appendChild(sparkle);
+        }
+    </script>
 </body>
 </html>
